@@ -26,7 +26,6 @@
 		<aspectj.version>1.8.6</aspectj.version>
 		<servlet.version>3.0.1</servlet.version>
 		<aopalliance.version>1.0</aopalliance.version>
-		<!-- <slf4j.version>1.7.21</slf4j.version> <logback.version>1.1.7</logback.version> -->
 		<commons-codec.version>1.9</commons-codec.version>
 		<commons-lang3.version>3.3.2</commons-lang3.version>
 		<shiro.version>1.2.3</shiro.version>
@@ -35,7 +34,6 @@
 		<spring-security-oauth2.version>2.0.2.RELEASE</spring-security-oauth2.version>
 		<gson.version>2.5</gson.version>
 		<junit.version>4.11</junit.version>
-		<spring-data-jpa.version>1.6.0.RELEASE</spring-data-jpa.version>
 		<mybatis-spring.version>1.2.2</mybatis-spring.version>
 		<lucene.version>4.10.4</lucene.version>
 	</properties>
@@ -44,31 +42,11 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
 			<version>${spring.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-log4j12</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>log4j</groupId>
-					<artifactId>log4j</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
 			<version>${spring.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-log4j12</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>log4j</groupId>
-					<artifactId>log4j</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -89,16 +67,6 @@
 			<groupId>aopalliance</groupId>
 			<artifactId>aopalliance</artifactId>
 			<version>${aopalliance.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-log4j12</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>log4j</groupId>
-					<artifactId>log4j</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<!-- spring aop -->
 
@@ -106,16 +74,6 @@
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
 			<version>${aspectj.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-log4j12</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>log4j</groupId>
-					<artifactId>log4j</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.aspectj</groupId>
@@ -134,16 +92,6 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<version>${servlet.version}</version>
 			<scope>provided</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-log4j12</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>log4j</groupId>
-					<artifactId>log4j</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.module</groupId>
@@ -164,45 +112,13 @@
 			<groupId>com.fasterxml.jackson.module</groupId>
 			<artifactId>jackson-module-jaxb-annotations</artifactId>
 			<version>${jackson.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-log4j12</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>log4j</groupId>
-					<artifactId>log4j</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
-		<!-- LOGGING begin <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-api</artifactId> 
-			<version>${slf4j.version}</version> </dependency> -->
-		<!-- <dependency> <groupId>ch.qos.logback</groupId> <artifactId>logback-classic</artifactId> 
-			<version>${logback.version}</version> <scope>runtime</scope> </dependency> -->
-		<!-- 代码直接调用log4j会被桥接到slf4j <dependency> <groupId>org.slf4j</groupId> <artifactId>log4j-over-slf4j</artifactId> 
-			<version>${slf4j.version}</version> <scope>runtime</scope> </dependency> -->
-		<!-- 代码直接调用common-logging会被桥接到slf4j <dependency> <groupId>org.slf4j</groupId> 
-			<artifactId>jcl-over-slf4j</artifactId> <version>${slf4j.version}</version> 
-			<scope>runtime</scope> </dependency> -->
-		<!-- 代码直接调用java.util.logging会被桥接到slf4j <dependency> <groupId>org.slf4j</groupId> 
-			<artifactId>jul-to-slf4j</artifactId> <version>${slf4j.version}</version> 
-			<scope>runtime</scope> </dependency> -->
 
 		<dependency>
 			<groupId>com.googlecode.log4jdbc</groupId>
 			<artifactId>log4jdbc</artifactId>
 			<version>1.2</version>
 			<scope>runtime</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-log4j12</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>log4j</groupId>
-					<artifactId>log4j</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<!-- LOGGING end -->
 
@@ -218,16 +134,6 @@
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
 			<version>${commons-codec.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-log4j12</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>log4j</groupId>
-					<artifactId>log4j</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -238,52 +144,16 @@
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
 			<version>${mybatis.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-log4j12</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>log4j</groupId>
-					<artifactId>log4j</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 			<version>2.6.2</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-log4j12</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>log4j</groupId>
-					<artifactId>log4j</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-log4j12</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>log4j</groupId>
-					<artifactId>log4j</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
-		<!-- <dependency> <groupId>commons-io</groupId> <artifactId>commons-io</artifactId> 
-			<version>${commons-io.version}</version> </dependency> <dependency> <groupId>commons-logging</groupId> 
-			<artifactId>commons-logging</artifactId> <version>1.2</version> </dependency> 
-			<dependency> <groupId>com.google.guava</groupId> <artifactId>guava</artifactId> 
-			<version>${guava.version}</version> </dependency> <dependency> <groupId>redis.clients</groupId> 
-			<artifactId>jedis</artifactId> <version>${jedis.version}</version> </dependency> -->
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
