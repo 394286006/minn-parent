@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>p.minn</groupId>
 	<artifactId>minn-parent</artifactId>
-	<version>0.0.1</version>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	<name>minn</name>
 	<description>parent</description>
@@ -36,7 +36,33 @@
 		<junit.version>4.11</junit.version>
 		<mybatis-spring.version>1.2.2</mybatis-spring.version>
 		<lucene.version>4.10.4</lucene.version>
+		<ehcache.version>2.6.9</ehcache.version>
+		<guava.version>17.0</guava.version>
+		<spring-cloud-security-oauth2-version>1.2.1.RELEASE</spring-cloud-security-oauth2-version>
+		<c3p0.version>0.9.1.2</c3p0.version>
+		<tomcat.jdbc.version>8.5.23</tomcat.jdbc.version>
 	</properties>
+	<repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/libs-milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Dalston.RC1</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
